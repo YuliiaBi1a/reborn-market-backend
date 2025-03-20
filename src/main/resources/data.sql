@@ -1,5 +1,6 @@
 --User
-
+INSERT INTO users (email, username, password)
+VALUES ('u@gmail.com','admin', '$2a$12$e.JYVZ./l.anff1gn455vetWFqFYP/7WOFVZRGUhMH7wugsj04Lsi');
 --Category
 INSERT INTO category (id, name) VALUES (1, 'CLOTHING');
 INSERT INTO category (id, name) VALUES (2, 'FOOTWEAR');
