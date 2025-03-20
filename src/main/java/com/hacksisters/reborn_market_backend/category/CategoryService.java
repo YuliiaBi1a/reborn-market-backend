@@ -46,7 +46,6 @@ public class CategoryService {
         return CategoryDtoResponse.fromEntity( categoryRepository.save(existingCategory));
     }
 
-    @Transactional
     public void deleteCategoryById(Long id) {
         if (!categoryRepository.existsById(id)) {
             throw  new RuntimeException("Category with id " + id + " not found.");
