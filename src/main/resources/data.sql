@@ -2,18 +2,18 @@
 INSERT INTO users (email, username, password)
 VALUES ('u@gmail.com','admin', '$2a$12$e.JYVZ./l.anff1gn455vetWFqFYP/7WOFVZRGUhMH7wugsj04Lsi');
 --Category
-INSERT INTO categories (id, name) VALUES
-(1, 'ROPA'),
-(2, 'CALZADO'),
-(3, 'JUGUETES'),
-(4, 'ACCESORIOS'),
-(5, 'ARTÍCULOS PARA BEBÉ'),
-(6, 'SALUD Y SEGURIDAD'),
-(7, 'MUEBLES'),
-(8, 'ALIMENTACIÓN'),
-(9, 'LIBROS'),
-(10, 'ROPA DE CAMA'),
-(11, 'MATERNIDAD');
+INSERT INTO categories (name) VALUES
+('ROPA'),
+('ALZADO'),
+('JUGUETES'),
+('ACCESORIOS'),
+('ARTÍCULOS PARA BEBÉ'),
+('SALUD Y SEGURIDAD'),
+('MUEBLES'),
+('ALIMENTACIÓN'),
+('LIBROS'),
+('ROPA DE CAMA'),
+('MATERNIDAD');
 
 INSERT INTO products (id, name, image, description, price, age, condition, user_id, category_id) VALUES
 (Default, 'Bebé de Juguete', 'https://res.cloudinary.com/dtxf1xjmd/image/upload/v1742467340/hackaton/ai8zzyxwflrwzw6jauxk.jpg', 'Muñeco bebé con accesorios, ideal para niños pequeños.', 19.99, 3, 'NUEVO', 1, 3),
