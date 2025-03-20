@@ -2,12 +2,32 @@
 
 ## Table of Contents
 - [Project Description](#project-description)
+- [Reborn Market](#-reborn-market)
+- [Philosophy](#-philosophy)
 - [Key Features](#key-features)
 - [Project Structure](#project-structure)
 - [Api Endpoints](#api-endpoints)
+- [Working Examples](#working-examples)
+- [Technologies Used](#technologies-used)
+- [Installation and Setup](#installation-and-setup)
+- [CI/CD Pipeline](#-cicd-pipeline)
+- [Setting Up Docker Compose](#-setting-up-docker-compose)
+- [Unit and Acceptance Tests](#unit-and-acceptance-tests)
 ---
 ## 💡Project Description
 We have developed this project with the specifications that were given to us at the beginning of the F5 Hackathon. Following the theme of the event, we have developed a market place. On this website you will be able to sell products related to parenting, from clothes to toys... We have implemented a basic auth, a small api and a database with PostgreSQL and Docker.
+
+---
+
+# 🌱 Reborn Market
+
+Reborn Market is a unique marketplace designed for parents who want to give a second life to children's items, as well as discover new products. Instead of throwing away clothes, toys, or furniture as their children grow, parents can sell, donate, exchange, or even buy new items from trusted vendors. Our goal is to promote sustainability, affordability, and convenience by allowing both companies and individuals to participate.
+
+## 🌍 Philosophy
+
+The name "Reborn" reflects our mission to breathe new life into pre-loved items and reduce waste, while also offering new, high-quality products for families in need. We believe that every product deserves a second chance, and that families should have easy access to affordable, sustainable, and even free items. The platform supports a wide range of price segments, from high-quality branded goods to free items donated by other parents, as well as brand-new products from trusted vendors.
+
+---
 
 ## 🚀Key Features
 ### 📜 Product Management
@@ -30,7 +50,7 @@ URL: http://localhost:8080/api/v1/ + endpoint
 | GET    | `/products`      | Retrieve all products.   |
 | POST   | `/products`      | Register a new product.  |
 | PUT    | `/products/{id}` | Update product details.  |
-| DELETE | `/prpducts/{id}` | Delete an product by ID. |
+| DELETE | `/products/{id}` | Delete an product by ID. |
 
 ---
 ## ✍️Working examples
@@ -39,9 +59,14 @@ URL: http://localhost:8080/api/v1/ + endpoint
 
 ```json
 {
-  "reservedSeats": 180,
-  "flightId": 2,
-  "userId": 2
+   "name": "Lego",
+   "image": "lego.jpg",
+   "description": "Lego description",
+   "price": 1200.50,
+   "age": 1,
+   "condition": "USADO",
+   "userId": 1,
+   "categoryId": 2
 }
 ```
 
@@ -94,7 +119,7 @@ This project uses GitHub Actions for continuous integration and continuous deplo
 - **Development Pipeline**: This pipeline runs in a development environment, where the project is built and deployed with a PostgreSQL containerized database using Docker. It tests the application in a more realistic environment.
 
 Both pipelines ensure that any changes made to the repository are properly tested and validated before being deployed.
-
+![CI img](https://github.com/HackSisters/reborn-market-backend/actions/workflows/ci.yml/badge.svg)
 ---
 ### 🛠️ Setting Up Docker Compose
 *To run the PostgreSQL database with Docker for the development environment, you can use Docker Compose.*
