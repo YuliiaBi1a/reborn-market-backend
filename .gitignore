@@ -34,3 +34,5 @@ build/
 
 ### Envir var ###
 .env
+#########
+.DS_Store
