@@ -1,8 +1,8 @@
 package com.hacksisters.reborn_market_backend.product;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -11,18 +11,33 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("${api-endpoint}/products")
 public class ProductController {
 
-    private ProductService productService;
+    private final ProductService productService;
 
     public ProductController(ProductService productService) {
         this.productService = productService;
     }
 
-    @GetMapping()
-    public ResponseEntity<?> getProducts() {
-        List<ProductDtoResponse> products = productService.findAllProducts();
-        if (products.isEmpty()) {
-            return ResponseEntity.badRequest().body("No hay productos");
+    @GetMapping
+    public ResponseEntity<?> getProducts(
+            @RequestParam Optional<String> name,
+            @RequestParam Optional<Long> categoryId,
+            @RequestParam Optional<String> condition,
+            @RequestParam Optional<String> ageGroup,
+            @RequestParam Optional<String> priceGroup) {
+
+        List<ProductDtoResponse> products;
+        if (name.isEmpty() && categoryId.isEmpty() && condition.isEmpty() && ageGroup.isEmpty()
+                && priceGroup.isEmpty()) {
+            products = productService.findAllProducts();
+        } else {
+            products = productService.findProductsByFilters(name, categoryId, condition, ageGroup, priceGroup);
         }
+
+        if (products.isEmpty()) {
+            Map<String, String> response = Map.of("message", "No products found");
+            return ResponseEntity.badRequest().body(response);
+        }
+
         return ResponseEntity.ok(products);
     }
 
@@ -46,9 +61,7 @@ public class ProductController {
     @DeleteMapping("/{id}")
     public ResponseEntity<Map<String, String>> deleteProduct(@PathVariable Long id) {
         productService.deleteProduct(id);
-        Map<String, String> response = new HashMap<>();
-        response.put("message", "Product deleted successfully");
+        Map<String, String> response = Map.of("message", "Product deleted successfully");
         return ResponseEntity.ok(response);
     }
-
 }
