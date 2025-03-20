@@ -14,6 +14,9 @@ INSERT INTO categories (id, name) VALUES (10, 'BEDDING');
 INSERT INTO categories (id, name) VALUES (11, 'MATERNITY');
 
 --Product
-INSERT INTO products (id, name, image, description, price, age, condition, user_id, category_id) VALUES (Default, 'Product 1', 'image1.jpg', 'Description 1', 19.99, 2, 'NUEVO', 1, 1);
-INSERT INTO products (id, name, image, description, price, age, condition, user_id, category_id) VALUES (Default, 'Product 2', 'image2.jpg', 'Description 2', 29.99, 3, 'USADO', 1, 2);
-INSERT INTO products (id, name, image, description, price, age, condition, user_id, category_id) VALUES (Default, 'Product 3', 'image3.jpg', 'Description 3', 39.99, 4, 'NUEVO', 1, 3);
+INSERT INTO products (id, name, image, description, price, age, condition, user_id, category_id) VALUES (Default, 'Camiseta', 'tshirt.jpg', 'Una cómoda camiseta de algodón', 15.99, 2, 'NUEVO', 1, 1);
+INSERT INTO products (id, name, image, description, price, age, condition, user_id, category_id) VALUES (Default, 'Jeans', 'jeans.jpg', 'Jeans clásicos de color azul', 25.99, 3, 'USADO', 1, 1);
+INSERT INTO products (id, name, image, description, price, age, condition, user_id, category_id) VALUES (Default, 'Zapatillas para correr', 'shoes.jpg', 'Zapatillas ligeras para correr', 50.00, 2, 'NUEVO', 1, 2);
+INSERT INTO products (id, name, image, description, price, age, condition, user_id, category_id) VALUES (Default, 'Botas', 'boots.jpg', 'Botas de cuero para invierno', 80.00, 5, 'USADO', 1, 2);
+INSERT INTO products (id, name, image, description, price, age, condition, user_id, category_id) VALUES (Default, 'Coche de juguete', 'car.jpg', 'Coche de juguete teledirigido', 30.00, 4, 'NUEVO', 1, 3);
+INSERT INTO products (id, name, image, description, price, age, condition, user_id, category_id) VALUES (Default, 'Muñeca', 'doll.jpg', 'Hermosa muñeca princesa', 20.00, 3, 'USADO', 1, 3);
