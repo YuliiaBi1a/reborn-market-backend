@@ -1,5 +1,6 @@
 package com.hacksisters.reborn_market_backend.register;
 
+import com.hacksisters.reborn_market_backend.product.ProductRepository;
 import com.hacksisters.reborn_market_backend.user.User;
 import com.hacksisters.reborn_market_backend.user.UserDtoRequest;
 import com.hacksisters.reborn_market_backend.user.UserRepository;
@@ -12,9 +13,11 @@ import java.util.*;
 public class UserRegisterService {
 
     private final UserRepository userRepository;
+    private final ProductRepository productRepository;
 
-    public UserRegisterService(UserRepository userRepository) {
+    public UserRegisterService(UserRepository userRepository, ProductRepository productRepository) {
         this.userRepository = userRepository;
+        this.productRepository = productRepository;
     }
 
     public List<User> findAllUsers(){
@@ -49,8 +52,11 @@ public class UserRegisterService {
     }
     public void deleteUserById(Long id) {
         if (!userRepository.existsById(id)) {
-            throw  new RuntimeException("Category with id " + id + " not found.");
+            throw new RuntimeException("User with id " + id + " not found.");
         }
+
+        productRepository.deleteByUserId(id);
+
         userRepository.deleteById(id);
     }
 }

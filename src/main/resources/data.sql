@@ -1,6 +1,6 @@
 --User
 INSERT INTO users (email, username, password)
-VALUES ('u@gmail.com','admin', '$2a$12$e.JYVZ./l.anff1gn455vetWFqFYP/7WOFVZRGUhMH7wugsj04Lsi');
+VALUES ('u@gmail.com','admin', '$2a$12$4do999l4tYxMwKFsx09pl.QcBMOa10b0QdQrnygr9Vr6xzeIZ50Em');
 --Category
 INSERT INTO categories (name) VALUES
 ('ROPA'),
