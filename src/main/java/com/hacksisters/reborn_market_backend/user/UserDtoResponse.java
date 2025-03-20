@@ -1,16 +1,11 @@
 package com.hacksisters.reborn_market_backend.user;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+public record UserDtoResponse (String email, String username) {
 
-@Getter
-@Setter
-@Builder
-@AllArgsConstructor
-@NoArgsConstructor
-public class UserDtoResponse {
-    private String username;
+    public static UserDtoResponse fromEntity(User user) {
+        return new UserDtoResponse(
+                user.getEmail(),
+                user.getUsername()
+        );
+    }
 }
