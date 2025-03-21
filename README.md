@@ -39,6 +39,7 @@ The name "Reborn" reflects our mission to breathe new life into pre-loved items 
 ---
 ## 📂Project Structure
 The project follows the principle of separation of features.
+
 ![img](https://github.com/user-attachments/assets/ebb86a11-f45b-45dd-a75c-620c9af31ede)
 
 ---
