@@ -44,13 +44,31 @@ The project follows the principle of separation of features.
 ---
 ## 📦API Endpoints
 URL: http://localhost:8080/api/v1/ + endpoint
+
+### User Endpoints
+| Method | Endpoint         | Description           |
+|--------|------------------|-----------------------|
+| GET    | `/private/users` | Retrieve all users.   |
+| POST   | `/register`      | Register a new user.  |
+| DELETE | `/user/{id}`     | Delete an user by ID. |
+
+
 ### Product Endpoints
+| Method | Endpoint         | Description             |
+|--------|------------------|-------------------------|
+| GET    | `/products`      | Retrieve all products.  |
+| POST   | `/products`      | Register a new product. |
+| PUT    | `/products/{id}` | Update product details. |
+| DELETE | `/products/{id}` | Delete a product by ID. |
+
+### Category Endpoints
 | Method | Endpoint         | Description              |
 |--------|------------------|--------------------------|
-| GET    | `/products`      | Retrieve all products.   |
-| POST   | `/products`      | Register a new product.  |
-| PUT    | `/products/{id}` | Update product details.  |
-| DELETE | `/products/{id}` | Delete an product by ID. |
+| GET    | `/category`      | Retrieve all categories. |
+| POST   | `/category`      | Register a new category. |
+| PUT    | `/category/{id}` | Update category details. |
+| DELETE | `/category/{id}` | Delete a category by ID. |
+
 
 ---
 ## ✍️Working examples
@@ -119,7 +137,9 @@ This project uses GitHub Actions for continuous integration and continuous deplo
 - **Development Pipeline**: This pipeline runs in a development environment, where the project is built and deployed with a PostgreSQL containerized database using Docker. It tests the application in a more realistic environment.
 
 Both pipelines ensure that any changes made to the repository are properly tested and validated before being deployed.
+
 ![CI img](https://github.com/HackSisters/reborn-market-backend/actions/workflows/ci.yml/badge.svg)
+
 ---
 ### 🛠️ Setting Up Docker Compose
 *To run the PostgreSQL database with Docker for the development environment, you can use Docker Compose.*
@@ -171,7 +191,8 @@ mvn spring-boot:run -Dspring.profiles.active=dev
 ---
 
 ### 🧪Unit and Acceptance Tests
-
+![img_2.png](img_2.png)
+![img_3.png](img_3.png)
 ---
 
 ---
