@@ -140,7 +140,6 @@ This project uses GitHub Actions for continuous integration and continuous deplo
 
 Both pipelines ensure that any changes made to the repository are properly tested and validated before being deployed.
 
-![CI img](https://github.com/HackSisters/reborn-market-backend/actions/workflows/ci.yml/badge.svg)
 
 ---
 ### 🛠️ Setting Up Docker Compose
