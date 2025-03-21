@@ -39,7 +39,7 @@ The name "Reborn" reflects our mission to breathe new life into pre-loved items 
 ---
 ## 📂Project Structure
 The project follows the principle of separation of features.
-![img.png](img.png)
+![img](https://github.com/user-attachments/assets/ebb86a11-f45b-45dd-a75c-620c9af31ede)
 
 ---
 ## 📦API Endpoints
@@ -116,7 +116,8 @@ git clone https://github.com/HackSisters/reborn-market-backend.git
 - For development, the application-dev.yml contains the configuration for a PostgreSQL database deployed using Docker.
 
 **Here you can see database architecture**
-![img_1.png](img_1.png)
+![img_1](https://github.com/user-attachments/assets/94d4e537-3d4e-4ffa-8a55-650dbf099d08)
+
 
 3**Run the application**:
    To run the application, first, make sure you have the correct profile active. You can specify the active profile by adding the following to your application.properties (or application-dev.yml and application-test.yml for environment-specific settings):
@@ -191,8 +192,9 @@ mvn spring-boot:run -Dspring.profiles.active=dev
 ---
 
 ### 🧪Unit and Acceptance Tests
-![img_2.png](img_2.png)
-![img_3.png](img_3.png)
+![img_2](https://github.com/user-attachments/assets/fedd2f5b-4d2c-445a-a3ab-4ba5c2a2ef27)
+![img_3](https://github.com/user-attachments/assets/5bbcc62d-7a87-434e-b991-a2c47ec2b914)
+
 ---
 
 ---
